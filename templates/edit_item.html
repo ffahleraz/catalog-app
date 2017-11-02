@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Welcome to Brag</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type=text/css href="{{url_for('static', filename='base.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <header>
+
+            <div class="title">
+                <div class="title-text">BRAG</div>
+            </div>
+            <div class="profile-container">
+                <div class"log-text">
+                    <h3>{{user.username}}</h3>
+                </div>
+                <a href="/logout/">
+                    <div class="log-button">
+                        LOGOUT
+                    </div>
+                </a>
+            </div>
+
+        </header>
+
+        <div class="content">
+
+            <div class="showcase-container">
+
+                <div class="showcase-own">
+                   <a href="/owner/{{user.id}}/">
+                       <h1 class="showcase-own-text">Your Shit</h1>
+                   </a>
+                </div>
+
+                {% for category in categories %}
+
+                <div class="showcase-item">
+                   <a href="/category/{{category.name}}/">
+                       <h1>{{category.name}}</h1>
+                   </a>
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="desc-heading-container">
+                <h1>Edit {{item.name}}</h1>
+            </div>
+
+            <div class="desc-container">
+
+                <div class="desc-long">
+                    <h2>What's changed?</h2>
+
+                    <form action="/item/{{item.id}}/edit/" method='POST'>
+
+                        <p>Category</p>
+                        <select name="category">
+
+                            {% for category in categories %}
+                            {% if category.id == item.category_id %}
+                            <option value="{{category.name}}" selected>
+                                {{category.name}}
+                            </option>
+                            {% else %}
+                            <option value="{{category.name}}">
+                                {{category.name}}
+                            </option>
+                            {% endif %}
+                            {% endfor %}
+
+                        </select>
+
+                        <p>Name</p>
+                        <input type='text' size='30' name='name' value='{{item.name}}'>
+
+                        <p>Price</p>
+                        <input type='text' size='30' name='price' value='{{item.price}}'>
+
+                        <p>Year bought</p>
+                        <input type='text' size='30' name='year' value='{{item.year}}'>
+
+                        <p>Description</p>
+                        <textarea rows="5" cols="30" name="description" value="">{{item.description}}</textarea>
+
+                        <p></p>
+
+                        <input type='submit' value='Save changes'>
+
+                    </form>
+
+                </div>
+
+                <div class="desc-short-container">
+
+                    <div class="desc-short-item-plain">
+                        <a href="/item/{{item.id}}/">
+                            <p>Cancel</p>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

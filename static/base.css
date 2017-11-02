@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    padding-bottom: 5px;
+    border-bottom: 4px solid black;
+    position: fixed;
+    top: 0px;
+}
+
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 1.7em;
+    color: #2D3C49;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 1.8em;
+    color: #7D97AD;
+}
+
+h3 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 1.8em;
+    color: #7D97AD;
+    margin-top: 18px;
+    margin-bottom: 0px;
+}
+
+p {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 1.2em;
+    color: black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.flash-container {
+    background-color: #EEEEEE;
+}
+
+.flash-text {
+    margin-left: 40px;
+}
+
+.title {
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+    display: inline
+}
+
+.title-text {
+    box-sizing: border-box;
+    font-size: 4.5em;
+    margin-left: 22px;
+    display: inline
+}
+
+.profile-container {
+    box-sizing: border-box;
+    display: inline;
+    float: right;
+    margin-right: 20px;
+    margin-top: 6px
+}
+
+.log-text {
+    display: inline;
+}
+
+.log-button {
+    color: #7D97AD;
+    display: inline;
+}
+
+.showcase-container {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.showcase-item {
+    flex-basis: 15%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 16px;
+}
+
+.showcase-own {
+    flex-basis: 15%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    border-radius: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 16px;
+}
+
+.showcase-own-text {
+    color: white;
+}
+
+.heading-container {
+    margin-left: 40px;
+}
+
+.desc-heading-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+
+.catalog-container {
+    box-sizing: border-box;
+    width: 700px;
+    margin: auto;
+}
+
+.catalog-item {
+    flex-basis: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    padding: 10px;
+}
+
+.catalog-item-subtext-item {
+    font-family: 'Playfair Display SC', serif;
+    display: inline;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.desc-container {
+    box-sizing: border-box;
+    width: 840px;
+    margin: auto;
+    display: flex;
+}
+
+.desc-container {
+    box-sizing: border-box;
+    width: 840px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.desc-short-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.desc-short-item {
+    flex-basis: 50%;
+    flex-grow: 1;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 10px;
+}
+
+.desc-short-item-plain {
+    flex-basis: 50%;
+    flex-grow: 1;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.desc-long {
+    flex-basis: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 10px;
+}

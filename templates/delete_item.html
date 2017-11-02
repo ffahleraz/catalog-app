@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Welcome to Brag</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type=text/css href="{{url_for('static', filename='base.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <header>
+
+            <div class="title">
+                <div class="title-text">BRAG</div>
+            </div>
+            <div class="profile-container">
+                <div class"log-text">
+                    <h3>{{user.username}}</h3>
+                </div>
+                <a href="/logout/">
+                    <div class="log-button">
+                        LOGOUT
+                    </div>
+                </a>
+            </div>
+
+        </header>
+
+        <div class="content">
+
+            <div class="showcase-container">
+
+                <div class="showcase-own">
+                   <a href="/owner/{{user.id}}/">
+                       <h1 class="showcase-own-text">Your Shit</h1>
+                   </a>
+                </div>
+
+                {% for category in categories %}
+
+                <div class="showcase-item">
+                   <a href="/category/{{category.name}}/">
+                       <h1>{{category.name}}</h1>
+                   </a>
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="desc-heading-container">
+                <h1>{{item.name}}</h1>
+            </div>
+
+            <div class="desc-container">
+
+                <div class="desc-long">
+                    <h2>Warning</h2>
+                    <p>Are you sure you want to delete this item?</p>
+                    <form action="/item/{{item.id}}/delete/" method = 'POST'>
+                        <input type='submit', value = 'Delete'>
+                    </form>
+                </div>
+
+                <div class="desc-short-container">
+
+                    <div class="desc-short-item-plain">
+                        <a href="/item/{{item.id}}/">
+                            <p>Cancel</p>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

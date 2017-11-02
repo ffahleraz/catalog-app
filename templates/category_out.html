@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Welcome to Brag</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type=text/css href="{{url_for('static', filename='base.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <header>
+            <div class="title">
+                <div class="title-text">BRAG</div>
+            </div>
+            <div class="profile-container">
+                <div class="log-button">
+                    <a href="/login/">
+                        <h2>LOGIN</h2>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <div class="showcase-container">
+
+                {% for category in categories %}
+
+                <div class="showcase-item">
+                   <a href="/category/{{category.name}}/">
+                       <h1>{{category.name}}</h1>
+                   </a>
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="heading-container">
+                <h2>{{current_category.name}}</h2>
+            </div>
+
+            <div class="catalog-container">
+
+                {% for item in items %}
+
+                <div class="catalog-item">
+
+                   <a href="/item/{{item.id}}/">
+                       <h1>{{item.name}}</h1>
+                   </a>
+                   <div class="catalog-item-subtext-contaner">
+                       <div class="catalog-item-subtext-item">USD {{item.price}}</div>
+                       <div class="catalog-item-subtext-item">Bought in {{item.year}}</div>
+                   </div>
+                   <p>{{item.description}}</p>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
