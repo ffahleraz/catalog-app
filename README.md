@@ -32,4 +32,3 @@ retrurn a list of all categories in JSON.
 - Items in a category: sending a GET request to
 localhost:8000/api/category/<category_name>/ will return a list of all items
 in a category in JSON.
-# Brag: A Catalog Web App

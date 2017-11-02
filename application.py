@@ -356,6 +356,10 @@ if __name__ == '__main__':
     app.secret_key = 'secret_key'
     app.debug = True
 
-    port = int(os.environ.get('PORT', 8000))
+    # for vagrant
+    #port = int(os.environ.get('PORT', 8000))
+    #app.run(host='0.0.0.0', port=port)
 
-    app.run(host='0.0.0.0', port=port)
+    # set these according to your deployment
+    port = int(os.environ.get('PORT', 80))
+    app.run(host='83.136.252.85', port=port)
